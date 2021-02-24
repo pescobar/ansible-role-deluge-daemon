@@ -1,2 +1,12 @@
 ---
 # handlers file for ansible-role-deluge-daemon
+
+- name: restart deluged
+  service:
+    state: restarted
+    name: deluged.service
+
+- name: stop deluged
+  service:
+    state: stopped
+    name: deluged.service
